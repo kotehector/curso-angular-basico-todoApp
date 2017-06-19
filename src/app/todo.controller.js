@@ -3,5 +3,5 @@ function TodoController() {
 }
 
 angular
-  .module
+  .module('app')
   .controller('TodoController', TodoController);

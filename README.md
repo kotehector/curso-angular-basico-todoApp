@@ -1,4 +1,4 @@
-# Curso Angular Fundamentals
+# Curso Angular Basico - Todo App
 
 ## Todo App
 - Lab 1
