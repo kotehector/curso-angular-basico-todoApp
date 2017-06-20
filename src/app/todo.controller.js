@@ -1,7 +1,7 @@
 function TodoController() {
   this.list = [{
     title: 'Primera Tarea',
-    completed: false
+    completed: true
   },{
     title: 'Segunda Tarea',
     completed: false
