@@ -36,9 +36,17 @@
           </div>
           <!-- Borrar tarea -->
           <a href="" ng-click="todo.removeTodo();">Borrar</a>
+
         </li>
       </ul>
-
+      <p class="todo__remaining">
+        <span ng-show="todo.getRemaning().length > 0">
+          Faltan: {{ todo.getRemaning().length }} de {{ todo.list.length }}
+        </span>
+        <span ng-show="todo.getRemaning().length === 0">
+          Todas las tareas finalizadas!!!
+        </span>
+      </p>
     </div>
 
 
