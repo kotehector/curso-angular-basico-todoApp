@@ -25,17 +25,20 @@
       <ul class="todo__list">
         <li ng-repeat="item in todo.list">
 
-          <input type="checkbox" id="todo-{{ $index }}" ng-model="item.completed">
+          <input type="checkbox"
+                 id="todo-{{ $index }}"
+                 ng-model="item.completed"
+                 ng-change="todo.toggleState(item);">
           <label class="toggle" for="todo-{{ $index }}"></label>
           <!-- Editar tarea -->
           <p ng-dblclick="showEditField = true;" ng-hide="showEditField"> {{ item.title }} </p>
           <div ng-show="showEditField">
               <input type="text"
-                     ng-blur="showEditField = false;"
+                     ng-blur="todo.updateTodo(item, $index); showEditField = false;"
                      ng-model="item.title">
           </div>
           <!-- Borrar tarea -->
-          <a href="" ng-click="todo.removeTodo();">Borrar</a>
+          <a href="" ng-click="todo.removeTodo(item, $index);">Borrar</a>
 
         </li>
       </ul>
@@ -55,6 +58,7 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="app/app.js"></script>
+    <script src="app/todo.service.js"></script>
     <script src="app/todo.controller.js"></script>
     <!-- endinject -->
   </body>
