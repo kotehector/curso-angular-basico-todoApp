@@ -3,8 +3,6 @@
   "name": "curso-angular-basico-todoApp",
   "appPath": "src/",
   "dependencies": {
-    "angular": "^1.6.1",
-    "angular-ui-router": "1.0.0-beta.2",
-    "angular-resource": "^1.6.4"
+    "angular": "^1.6.1"
   }
 }
